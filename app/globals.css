@@ -16,10 +16,14 @@ html {
     @apply font-body;
 }
 
+body {
+    @apply bg-background text-foreground-muted;
+}
+
 h1,
 h2,
 h3 {
-    @apply font-heading;
+    @apply font-heading text-foreground;
 }
 
 .btn-outline {
@@ -37,6 +41,19 @@ h3 {
 .btn-accent-pill {
     @apply bg-accent text-accent-foreground font-bold text-xs px-6 py-3 rounded-full tracking-wider hover:bg-accent/70 cursor-pointer flex justify-center items-center gap-2;
 }
-.badge-accent{
+
+.badge-accent {
     @apply bg-accent text-accent-foreground font-body text-xs rounded-full px-2.5 py-0.5;
 }
+
+/* Header Section CSS Start */
+.nav-link {
+    @apply px-5 py-3 text-xs font-bold transition rounded-full;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    @apply bg-accent/20 text-accent;
+}
+
+/* Header Section CSS End */
