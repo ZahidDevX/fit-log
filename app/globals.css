@@ -1,26 +1,42 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+    --color-background: #0C0D10;
+    --color-background-muted: #15171D;
+    --color-foreground: #ffffff;
+    --color-foreground-muted: #9CA3AF;
+    --color-accent: #C2F800;
+    --color-accent-foreground: #000000;
+    --font-body: var(--font-inter);
+    --font-heading: var(--font-oswald);
+    --color-border-muted: #374151;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+    @apply font-body;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+h1,
+h2,
+h3 {
+    @apply font-heading;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.btn-outline {
+    @apply bg-transparent text-foreground font-bold text-xs px-6 py-3 rounded tracking-wider hover:bg-accent/70 cursor-pointer flex justify-center items-center gap-2 border border-border-muted;
+}
+
+.btn-outline-pill {
+    @apply bg-transparent text-foreground font-bold text-xs px-6 py-3 rounded-full tracking-wider hover:bg-accent/70 cursor-pointer flex justify-center items-center gap-2 border border-border-muted;
+}
+
+.btn-accent {
+    @apply bg-accent text-accent-foreground font-bold text-xs px-6 py-3 rounded tracking-wider hover:bg-accent/70 cursor-pointer flex justify-center items-center gap-2;
+}
+
+.btn-accent-pill {
+    @apply bg-accent text-accent-foreground font-bold text-xs px-6 py-3 rounded-full tracking-wider hover:bg-accent/70 cursor-pointer flex justify-center items-center gap-2;
+}
+.badge-accent{
+    @apply bg-accent text-accent-foreground font-body text-xs rounded-full px-2.5 py-0.5;
 }
