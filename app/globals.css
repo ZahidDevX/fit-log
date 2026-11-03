@@ -13,7 +13,7 @@
 }
 
 html {
-    @apply font-body;
+    @apply font-body scroll-smooth;
 }
 
 body {
@@ -43,7 +43,7 @@ h3 {
 }
 
 .badge-accent {
-    @apply bg-accent text-accent-foreground font-body text-xs rounded-full px-2.5 py-0.5;
+    @apply bg-accent text-accent-foreground font-body font-bold text-xs rounded-full px-2.5 py-0.5;
 }
 
 /* Header Section CSS Start */
